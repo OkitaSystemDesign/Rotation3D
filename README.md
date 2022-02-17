@@ -1,7 +1,9 @@
 # python3d
 EulerAngle Quaternion
 
-オイラー角とクオータニオンの回転を紙飛行機モデルを使って計算してみる
+紙飛行機を回転する計算などをしてみる
+
+
 ### PaperAirplaneEuler.py
 オイラー角を使って紙飛行機を回転してみる
 
