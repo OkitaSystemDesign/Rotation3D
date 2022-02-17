@@ -12,6 +12,6 @@ EulerAngle Quaternion
 クオータニオン（四元数）を使って紙飛行機を回転
 
 
-### getCeenterPlot.py
+### getCenterPlot.py
 空間の３点を指定して、その中心を求めて球、平面、円を書く
 
