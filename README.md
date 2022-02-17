@@ -1,7 +1,7 @@
 # python3d
 EulerAngle Quaternion
 
-紙飛行機を回転する計算などをしてみる
+３次元空間の中でいろいろ計算をしてみる
 
 
 ### PaperAirplaneEuler.py
