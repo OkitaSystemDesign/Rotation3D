@@ -1,13 +1,13 @@
 # python3d
 EulerAngle Quaternion
 
-３次元空間の中でいろいろ計算をしてみる
+３次元空間の中でいろいろ計算をしてみます
 
 
 ### PaperAirplaneEuler.py
-オイラー角を使って紙飛行機を回転してみる
+オイラー角を使って紙飛行機を回転
 
 
 ### paperAirPlaneQuaternion.py
-クオータニオン（四元数）を使って紙飛行機を回転してみる
+クオータニオン（四元数）を使って紙飛行機を回転
 
