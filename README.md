@@ -6,6 +6,7 @@ EulerAngle Quaternion
 
 ### PaperAirplaneEuler.py
 オイラー角を使って紙飛行機を回転
+（調整中）
 
 
 ### PaperAirplaneQuaternion.py
