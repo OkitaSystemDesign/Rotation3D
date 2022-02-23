@@ -4,7 +4,7 @@ EulerAngle Quaternion
 ３次元空間の中でいろいろ計算をしてみます
 
 
-### PaperAirplaneEuler.py
+## PaperAirplaneEuler.py
 オイラー角を使って紙飛行機を回転
 
 
