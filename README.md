@@ -8,11 +8,11 @@ EulerAngle Quaternion
 オイラー角を使って紙飛行機を回転
 
 
-### PaperAirplaneQuaternion.py
+## PaperAirplaneQuaternion.py
 クオータニオン（四元数）を使って紙飛行機を回転
 
 
-### getCenterPlot.py
+## getCenterPlot.py
 空間の３点を指定して、その中心を求めて球、平面、円を書く  
 ３元連立方程式を解く（ガウスの消去法）も入ってる
 
