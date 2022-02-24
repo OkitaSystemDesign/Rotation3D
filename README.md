@@ -25,6 +25,6 @@ Matrix EulerAngle Quaternion
 ### PaperAirplaneQuaternion(angle, order)
 紙飛行機のモデルを7点で作ってクオータニオンで任意の姿勢に回転する様子をmatplotlibで表示します
 
-# Qiita記事  
+## Qiita記事  
 https://qiita.com/OkitaSystemDesign/items/23e94d4e0db22cc6ebd4  
 https://qiita.com/OkitaSystemDesign/items/fb5d5e4918d31ccd5e34
