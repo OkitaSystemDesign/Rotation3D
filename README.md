@@ -22,8 +22,8 @@ Matrix EulerAngle Quaternion
 ### Euler2Quaternion(th, order)
 オイラー角(th)をクオータニオンに変換します
 
-### PaperAirplaneQuaternion(angle)
-紙飛行機のモデルを7点で作ってクオータニオンで回転する様子をmatplotlibで表示します
+### PaperAirplaneQuaternion(angle, order)
+紙飛行機のモデルを7点で作ってクオータニオンで任意の姿勢に回転する様子をmatplotlibで表示します
 
 
 ## getCenterPlot.py
