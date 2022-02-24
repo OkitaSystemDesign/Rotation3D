@@ -1,15 +1,17 @@
-# python3d
-EulerAngle Quaternion
+# 3D Rotation
+Matrix EulerAngle Quaternion 
 
-３次元空間の中でいろいろ計算をしてみます
-
-
-## PaperAirplaneEuler.py
-オイラー角を使って紙飛行機を回転
+紙飛行機のモデルを空間で回転します
 
 
-## PaperAirplaneQuaternion.py
+## EulerRotation.py
+オイラー角を使って紙飛行機を回転してみます
+EulerRotation(angle, order)
+
+
+## QuaternionRotation.py
 クオータニオン（四元数）を使って紙飛行機を回転
+QuaternionRotation(angle)
 
 
 ## getCenterPlot.py
