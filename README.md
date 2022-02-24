@@ -5,7 +5,7 @@ Matrix EulerAngle Quaternion
 
 
 ## PaperAirplaneEuler.py
-オイラー角を使って紙飛行機を回転してみます
+オイラー角を使って紙飛行機を回転してみます  
 [F1]キーで回転が始まります
 
 ### EulerAngles(p, th, order)
@@ -13,11 +13,11 @@ Matrix EulerAngle Quaternion
 
 ### PaperAirplaneEuler(angle, order)
 紙飛行機のモデルを7点で作ってオイラー角で回転する様子をmatplotlibで表示します
-
-
+  
+  
 
 ## PaperAirplaneQuaternion.py
-クオータニオン（四元数）を使って紙飛行機を回転してみます
+クオータニオン（四元数）を使って紙飛行機を回転してみます  
 [F1]キーで回転が始まります
 
 ### Euler2Quaternion(th, order)
