@@ -25,7 +25,3 @@ Matrix EulerAngle Quaternion
 ### PaperAirplaneQuaternion(angle, order)
 紙飛行機のモデルを7点で作ってクオータニオンで任意の姿勢に回転する様子をmatplotlibで表示します
 
-
-## getCenterPlot.py
-空間の３点を指定して、その中心を求めて球、平面、円を書く
-
