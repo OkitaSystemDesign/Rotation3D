@@ -15,6 +15,8 @@ numpy-quaternionライブラリを使用
 import ctypes
 from enum import Enum
 
+import time
+from urllib.parse import SplitResult
 import numpy as np
 import quaternion
 import matplotlib.pyplot as plt
@@ -149,7 +151,7 @@ def PaperAirplaneQuaternion(angle, order):
     T = T1 / np.linalg.norm(T1)       # 回転用 単位ベクトル
 
     rotate = 0.0
-    speed = 0.0
+    speed = 5.0
     RotateEnd = False
 
     # 回転を表すクォータニオン
@@ -167,17 +169,25 @@ def PaperAirplaneQuaternion(angle, order):
             Q1 = np.quaternion(1, x[i], y[i], z[i])     # 初期位置のクォータニオン
             Q2 = R * Q1 * R.conj()                      # 回転の計算
             x2[i], y2[i], z2[i] = Q2.x, Q2.y, Q2.z      # 表示用座標
-
+        
         # 最終姿勢の近くに来たらループから抜ける
-        if speed > 0:
-            #print(Q9.w, R.w)
-            if round(Q9.w * (speed*10)) == round(R.w * (speed*10)):
-                #最終姿勢の描画
-                for i in range(7):
-                    Q1 = np.quaternion(0, x[i], y[i], z[i])
-                    Q2 = Q9 * Q1 * Q9.conj()
-                    x2[i], y2[i], z2[i] = Q2.x, Q2.y, Q2.z
-                RotateEnd = True
+        if (R.w - Q9.w) > 0:
+            if round(Q9.w * 100000) == round(R.w * 100000):
+                speed = (R.w - Q9.w)
+            elif round(Q9.w * 10000) == round(R.w * 10000):
+                speed = 1
+            elif round((Q9.w)*10) == round((R.w)*10):
+                speed = ((R.w - Q9.w) * 500) / 2
+
+        else:
+            #最終姿勢の描画
+            for i in range(7):
+                Q1 = np.quaternion(0, x[i], y[i], z[i])
+                Q2 = Q9 * Q1 * Q9.conj()
+                x2[i], y2[i], z2[i] = Q2.x, Q2.y, Q2.z
+            RotateEnd = True
+
+        print("%f %f %f" %(Q9.w,R.w, speed))
         
         
         # ----- 以下 グラフ表示用 -----
@@ -203,33 +213,17 @@ def PaperAirplaneQuaternion(angle, order):
         ax.set_xlabel("x");     ax.set_ylabel("y");     ax.set_zlabel("z")
         ax.set_xlim(-2,2);      ax.set_ylim(-2,2);      ax.set_zlim(-2,2)
         ax.set_box_aspect((1,1,1))
-        ax.text(-1,-1,-2,'[F1]:Start Pause, [ESC]:Stop', fontsize=9)
         ax.text(-1,-1,-2.3, 'Target Euler Angle: '+format(angle[0],'.1f')+', '+format(angle[1],'.1f')+', '+format(angle[2],'.1f'), fontsize=9)
 
         if RotateEnd:
             break
         
         rotate = rotate + speed
-
         plt.pause(0.1)
 
-        if getkey(F1):
-            if speed == 0.0:
-                speed = 3.0
-            else:
-                speed = 0.0
-        
-        if getkey(ESC):
-            break
-    
     plt.show()
 
 
-ESC = 0x1b  #ESCキー
-F1 = 0x70   #F1キー
-def getkey(key):
-    return(bool(ctypes.windll.user32.GetAsyncKeyState(key) & 0x8000))
-
-angle = [60.0, 20.0, 30.0]       # 最終姿勢のオイラー角
-order = EulerOrder.YZX
+angle = [80.0, 120.0, 60.0]       # 最終姿勢のオイラー角
+order = EulerOrder.XYZ
 PaperAirplaneQuaternion(angle, order)
