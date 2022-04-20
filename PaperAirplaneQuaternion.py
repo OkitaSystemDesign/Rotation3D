@@ -15,7 +15,6 @@ numpy-quaternionライブラリを使用
 import ctypes
 from enum import Enum
 
-import time
 from urllib.parse import SplitResult
 import numpy as np
 import quaternion
