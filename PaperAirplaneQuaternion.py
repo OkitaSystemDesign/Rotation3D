@@ -186,9 +186,6 @@ def PaperAirplaneQuaternion(angle, order):
                 x2[i], y2[i], z2[i] = Q2.x, Q2.y, Q2.z
             RotateEnd = True
 
-        print("%f %f %f" %(Q9.w,R.w, speed))
-        
-        
         # ----- 以下 グラフ表示用 -----
         # 法線ベクトルをプロット
         P0 = [0,0,0]
