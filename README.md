@@ -17,7 +17,7 @@ Matrix EulerAngle Quaternion
 
 ## PaperAirplaneQuaternion.py
 クオータニオン（四元数）を使って紙飛行機を回転してみます  
-[F1]キーで回転が始まります
+実行するとすぐに回転が始まります
 
 ### Euler2Quaternion(th, order)
 オイラー角(th)をクオータニオンに変換します
